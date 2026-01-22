@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free vs Paid AI Tools</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h1>AI Tools Hub</h1>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="free-vs-paid.html">Free vs Paid</a>
+</nav>
+
+</header>
+
+<section class="categories">
+    <h2>Free vs Paid AI Tools</h2>
+
+    <div class="card-container" id="toolsContainer"></div>
+<script src="js/tools.js"></script>
+<script>
+  const container = document.getElementById("toolsContainer");
+
+  Object.keys(toolsData).forEach(category => {
+    toolsData[category].forEach(tool => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <h3>${tool.name}</h3>
+        <p>${  category}</p>
+        <span class="badge ${tool.pricing.toLowerCase()}">${tool.pricing}</span>
+        <p>${tool.description}</p>
+        <a class="btn" href="${tool.link}" target="_blank">Visit Tool</a>
+      `;
+
+      container.appendChild(card);
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

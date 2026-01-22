@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tool Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h1>AI Tools Hub</h1>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="categories.html">Categories</a>
+    <a href="free-vs-paid.html">Free vs Paid</a>
+</nav>
+
+</header>
+
+<section class="tool-card">
+    <h2 id="toolName"></h2>
+
+    <span id="pricingBadge" class="badge"></span>
+
+    <p><strong>Category:</strong> <span id="category"></span></p>
+
+    <p id="description" style="margin-top:15px;"></p>
+
+    <a id="visitLink" class="btn" target="_blank">Visit Tool</a>
+</section>
+
+<!-- IMPORTANT: scripts must be at the END -->
+<script src="js/tools.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const toolKey = params.get("tool");
+
+  let toolFound = null;
+  let toolCategory = "";
+
+  for (const category in toolsData) {
+    for (const tool of toolsData[category]) {
+      if (tool.key === toolKey) {
+        toolFound = tool;
+        toolCategory = category;
+        break;
+      }
+    }
+  }
+
+  if (toolFound) {
+    document.getElementById("toolName").innerText = toolFound.name;
+    document.getElementById("category").innerText = toolCategory;
+    document.getElementById("description").innerText = toolFound.description;
+
+    const badge = document.getElementById("pricingBadge");
+    badge.innerText = toolFound.pricing;
+    badge.className = "badge " + toolFound.pricing.toLowerCase();
+
+    const visitBtn = document.getElementById("visitLink");
+    visitBtn.href = toolFound.link;
+  } else {
+    document.querySelector(".tool-card").innerHTML =
+      "<h2>Tool not found</h2><p>Please go back and select a valid tool.</p>";
+  }
+</script>
+
+</body>
+</html>

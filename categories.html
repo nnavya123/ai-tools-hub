@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories - AI Tools Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h1>AI Tools Hub</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="free-vs-paid.html">Free vs Paid</a>
+    </nav>
+</header>
+
+<section class="categories">
+    <h2>AI Tools by Category</h2>
+    <div id="categoriesContainer"></div>
+</section>
+
+<!-- Load tools data -->
+<script src="js/tools.js"></script>
+<script>
+  const container = document.getElementById("categoriesContainer");
+
+  Object.keys(toolsData).forEach(category => {
+    const section = document.createElement("div");
+    section.className = "card";
+
+    let toolsHTML = "";
+    toolsData[category].forEach(tool => {
+      toolsHTML += `
+        <p>
+          <a href="tool.html?tool=${tool.key}">${tool.name}</a>
+          <span class="badge ${tool.pricing.toLowerCase()}">${tool.pricing}</span>
+        </p>
+      `;
+    });
+
+    section.innerHTML = `<h3>${category}</h3>${toolsHTML}`;
+    container.appendChild(section);
+  });
+</script>
+
+
+</body>
+</html>
