@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+.navbar {
+    background: #111;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.categories {
+    padding: 40px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+
+/* Tool details */
+.tool-card {
+    background: white;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.free { background: #d4edda; color: #155724; }
+.paid { background: #f8d7da; color: #721c24; }
+.freemium { background: #fff3cd; color: #856404; }
+/* Categories layout */
+#categoriesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Each category card */
+#categoriesContainer .card {
+    text-align: left;
+    padding: 25px;
+}
+
+/* ===============================
+   Categories Grid Layout
+================================ */
+
+#categoriesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+/* Category card */
+#categoriesContainer .card {
+    background: #ffffff;
+    padding: 26px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+/* Category title */
+#categoriesContainer .card h3 {
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+/* Tool row */
+.tool-item {
+    margin-bottom: 14px;
+}
+
+/* Tool clickable area */
+.tool-item a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f7f9fc;
+    padding: 14px 18px;
+    border-radius: 14px;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.tool-item a:hover {
+    background: #eef3ff;
+    transform: translateY(-2px);
+}
+
+/* Tool name */
+.tool-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+}
+
+/* Pricing badge */
+.tool-item .badge {
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+#categoriesContainer .badge {
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+
+
+
+/* Tool name */
+#categoriesContainer .card a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+/* Badge spacing */
+#categoriesContainer .badge {
+    margin-left: 10px;
+}
+#categoriesContainer .card h3 {
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+#categoriesContainer {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
