@@ -124,3 +124,60 @@ footer {
   text-decoration: none;
   color: #111;
 }
+/* ---------- Category Cards ---------- */
+
+#categoriesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.card h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* ---------- Tool Item ---------- */
+
+.tool-item {
+  margin-bottom: 12px;
+}
+
+.tool-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: #f7f9fc;
+  transition: all 0.2s ease;
+}
+
+.tool-item a:hover {
+  background: #eef3ff;
+  transform: translateY(-2px);
+}
+
+.tool-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+}
+
+/* ---------- Badges ---------- */
+
+.badge {
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}

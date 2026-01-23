@@ -46,14 +46,14 @@ const toolsData = {
       link: "https://otter.ai"
     },
     {
-      key: "Noty AI",
+      key: "noty-ai",
       name: "Noty AI",
       pricing: "Freemium",
       description: "Automatically records, transcribes, and summarizes meetings into actionable summarizes and to-do lists.",
       link: "https://noty.ai/"
     },
     {
-      key: "Fireflies",
+      key: "fireflies",
       name: "Fireflies",
       pricing: "Freemium",
       description: "AI meeting assistant that records, transcribes, and summarizes conversations.",
@@ -64,14 +64,14 @@ const toolsData = {
 
   Image: [
     {
-      key: "Fotor",
+      key: "fotor",
       name: "Fotor",
       pricing: "Freemium",
       description: "An all-in-one online platform for photo editing, graphic design, and AI-powered image creation.",
       link: "https://www.fotor.com/"
     },
     {
-      key: "Midjourney",
+      key: "midjourney",
       name: "Midjourney",
       pricing: "Free",
       description: "Midjourney AI is used to create unique, high-quality images and art from simple text descriptions.",
@@ -82,21 +82,21 @@ const toolsData = {
 
   Website: [
     {
-      key: "10Web",
+      key: "tenweb",
       name: "10Web",
       pricing: "Freemium",
       description: "Lets you automatically build, host, optimize, and manage wordPress websites with drag-and-drop tools and automated features.",
       link: "https://10web.io/"
     },
     {
-      key: "Durable",
+      key: "durable",
       name: "Durable",
       pricing: "Freemium",
       description: "AI tool that builds business websites instantly.",
       link: "https://durable.com/"
     },
     {
-      key: "Framer",
+      key: "framer",
       name: "Framer",
       pricing: "Freemium",
       description: "AI-enhanced no-code design and website builder for intractive sites and prototypes.",

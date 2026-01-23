@@ -30,16 +30,26 @@
     section.className = "card";
 
     let toolsHTML = "";
+
     toolsData[category].forEach(tool => {
       toolsHTML += `
-        <p>
-          <a href="tool.html?tool=${tool.key}">${tool.name}</a>
-          <span class="badge ${tool.pricing.toLowerCase()}">${tool.pricing}</span>
-        </p>
+        <div class="tool-item">
+          <a href="tool.html?tool=${tool.key}">
+            <div class="tool-name">${tool.name}</div>
+            <span class="badge ${tool.pricing.toLowerCase()}">
+              ${tool.pricing}
+              </span>
+              </a>
+              </div>
+
       `;
     });
 
-    section.innerHTML = `<h3>${category}</h3>${toolsHTML}`;
+    section.innerHTML = `
+      <h3>${category}</h3>
+      ${toolsHTML}
+    `;
+
     container.appendChild(section);
   });
 </script>
